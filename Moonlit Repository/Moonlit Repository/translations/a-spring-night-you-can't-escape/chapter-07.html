@@ -15,7 +15,7 @@
 </script>
 
 
-
+<div class="chapter" data-release="2026-09-08">
 <h1>Dry Up</h1>
 <div class="chapter-body">
 
@@ -291,6 +291,17 @@
 <p>Shu Cheng looked up as he approached, completely stunned.</p>
 
 <p>It was He Jingting. Was she dreaming?</p>
+
+
+<script>
+document.querySelectorAll('.chapter').forEach(chapter => {
+  const releaseDate = new Date(chapter.dataset.release);
+  if (new Date() < releaseDate) {
+    chapter.innerHTML = "🔒 Locked until " + chapter.dataset.release;
+  }
+});
+</script>
+
 
 
 <div class="note">
