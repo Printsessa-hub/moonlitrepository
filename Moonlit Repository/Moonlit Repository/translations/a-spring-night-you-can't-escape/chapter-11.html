@@ -15,9 +15,29 @@
 </script>
 
 
-<h1>TBA</h1><div class="chapter-body">
+
+<div class="chapter" data-release="2026-10-06">
+
+<h1>TBA</h1>
+
+
+<div class="chapter-body">
 
 <p>TO BE POSTED.</p>
+
+
+
+
+<script>
+document.querySelectorAll('.chapter').forEach(chapter => {
+  const releaseDate = new Date(chapter.dataset.release);
+  if (new Date() < releaseDate) {
+    chapter.innerHTML = "🔒 Locked until " + chapter.dataset.release;
+  }
+});
+</script>
+
+
 
 <div class="note"><b>Translator's Note</b><p>Work in progress. See you soon.</p>
 </div></div>
